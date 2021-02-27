@@ -1,6 +1,6 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
-def substring(word, dictionary)
+def substrings(word, dictionary)
   words = word.split(" ")
   words.reduce(Hash.new(0)) do |result, word|
     result[word] += 1
@@ -8,6 +8,6 @@ def substring(word, dictionary)
   end
 end
 
-substring("below", dictionary)
+substrings("below", dictionary)
 
-substring("Howdy partner, sit down! How's it going?", dictionary)
+substrings("Howdy partner, sit down! How's it going?", dictionary)
